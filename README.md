@@ -21,17 +21,13 @@ The mapping file is deliberately simple. The primary simplification is to do wit
 
 The root element is the `map`. This contains a sequence of `mapping` elements. The overall reach of the mapping is defined by attributes on the `map` element:
 
-`ns`
-: 	The namespace of both input and output elements
+* `ns` - The namespace of both input and output elements
 
-`source-element`
-:	The element to be mapped; this can be overridden on the `mapping` element.
+* `source-element` - The element to be mapped; this can be overridden on the `mapping` element.
 
-`source-attribute`
-:	The attribute (on the source element) which will contain the value that the transformation is driven from. This can be overridden on the `mapping` element.
+* `source-attribute` - The attribute (on the source element) which will contain the value that the transformation is driven from. This can be overridden on the `mapping` element.
 
-`target-attribute`
-:	An optional default for an output attribute. Individual mapping elements can define a `target-attribute-value` to be placed in this attribute.
+* `target-attribute` - An optional default for an output attribute. Individual mapping elements can define a `target-attribute-value` to be placed in this attribute.
 
 ### `mapping` elements ###
 
@@ -39,32 +35,23 @@ The individual transformations are driven by `mapping` elements. `mapping` eleme
 
 The following attributes are defined (explained in more detail below):
 
-`source-value`
-: 	The `source-value` attribute provides an attribute value (usually this would be a Word style name) which can be used to define a XSLT template match.
+* `source-value` - The `source-value` attribute provides an attribute value (usually this would be a Word style name) which can be used to define a XSLT template match.
 
-`source-value-prefix`
-: 	This attribute fulfils the same role as `source-value` but allows an initial substring match instead of an exact match.
+* `source-value-prefix` - This attribute fulfils the same role as `source-value` but allows an initial substring match instead of an exact match.
 
-`source-value-suffix`
-: 	This attribute fulfils the same role as `source-value` but allows an final substring match instead of an exact match.
+* `source-value-suffix` -This attribute fulfils the same role as `source-value` but allows an final substring match instead of an exact match.
 
-`suppress`
-:	Whatever any other attributes are set to, a `mapping`  element with the `suppress` attribute set to true lead to the matching input node being suppressed in the output.
+* `suppress` - Whatever any other attributes are set to, a `mapping`  element with the `suppress` attribute set to true lead to the matching input node being suppressed in the output.
 
-`target-element`
-:	The `target-element` attribute enables the conversion of the input element into a different element in the same namespace. The value of the attribute can be a space separated list of element names. In this is the case multiple nested elements will be created in the output.
+* `target-element` - The `target-element` attribute enables the conversion of the input element into a different element in the same namespace. The value of the attribute can be a space separated list of element names. In this is the case multiple nested elements will be created in the output.
 
-`target-attribute`
-:	An optional output attribute name. The value of `target-attribute-value` is stored in the attribute if provided. 
+* `target-attribute` - An optional output attribute name. The value of `target-attribute-value` is stored in the attribute if provided. 
 
-`target-attribute-value`
-:	If the `target-attribute` and this attribute are provided the stylesheet will generate an attribute with the given name and value in the output
+* `target-attribute-value` - If the `target-attribute` and this attribute are provided the stylesheet will generate an attribute with the given name and value in the output
 
-`source-element`
-:	The element to be mapped.
+* `source-element` - The element to be mapped.
 
-`source-attribute`
-:	The attribute (on the source element) which will contain the value that the transformation is driven from. 
+* `source-attribute`  - The attribute (on the source element) which will contain the value that the transformation is driven from. 
 
 ### How it all works ###
 Each `mapping`  element is used to generate an `xsl:template` statement. The `source-element`, `source-attribute` and `source-value` attributes are combined to create the template match:
