@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="16.0">
+    <meta>
+        <filters directoryPatterns="" filePatterns="" positiveFilePatterns="" showHiddenFiles="false"/>
+        <options/>
+    </meta>
+    <projectTree name="mapping-tools.xpr">
+        <folder path="dist/"/>
+        <folder path="schemas/"/>
+        <folder path="src/"/>
+        <folder path="xproject/"/>
+        <file name="LICENSE"/>
+        <file name="mapping-tools.xpr"/>
+        <file name="README.md"/>
+    </projectTree>
+</project>

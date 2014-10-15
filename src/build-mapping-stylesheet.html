@@ -1,0 +1,2846 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Stylesheet documentation for: build-mapping-stylesheet.xsl</title>
+      <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript">
+         <!--
+        
+        var parametersBoxes= new Array('prs_M_mappingM_generate-elementsS_build-mapping-stylesheet.xsl');
+
+        
+        var usedByBoxes= new Array('uB_V_default-source-elementS_build-mapping-stylesheet.xsl', 
+				'uB_V_default-source-attributeS_build-mapping-stylesheet.xsl', 
+				'uB_V_global-target-attributeS_build-mapping-stylesheet.xsl');
+
+        var docBoxes= new Array('dS_M_mapS_build-mapping-stylesheet.xsl', 
+				'dS_M_mappingsuppresstrueS_build-mapping-stylesheet.xsl', 
+				'dS_M_mappingnotsource-valueorsource-value-prefixorsource-value-suffixS_build-mapping-stylesheet.xsl', 
+				'dS_M_mappingtarget-attribute-valuenottarget-attributeorglobal-target-attributeS_build-mapping-stylesheet.xsl', 
+				'dS_M_mappingS_build-mapping-stylesheet.xsl', 
+				'dS_M_mappingnottarget-elementS_build-mapping-stylesheet.xsl', 
+				'dS_M_source-valueS_build-mapping-stylesheet.xsl', 
+				'dS_M_source-value-prefixS_build-mapping-stylesheet.xsl', 
+				'dS_M_source-value-suffixS_build-mapping-stylesheet.xsl', 
+				'dS_M_mappingM_copy-attributesS_build-mapping-stylesheet.xsl', 
+				'dS_M_mappingtarget-attribute-valueM_copy-attributesS_build-mapping-stylesheet.xsl', 
+				'dS_M_mappingtarget-attribute-valuetarget-attributeglobal-target-attribute1source-attributedefault-source-attribute1M_copy-attributesS_build-mapping-stylesheet.xsl', 
+				'dS_M_mappingM_generate-elementsS_build-mapping-stylesheet.xsl', 
+				'dS_M_hintS_build-mapping-stylesheet.xsl', 
+				'dS_M_heading-levelS_build-mapping-stylesheet.xsl', 
+				'dS_V_default-source-elementS_build-mapping-stylesheet.xsl', 
+				'dS_V_default-source-attributeS_build-mapping-stylesheet.xsl', 
+				'dS_V_global-target-attributeS_build-mapping-stylesheet.xsl', 
+				'dS_O_S_build-mapping-stylesheet.xsl');
+
+        var sourceBoxes= new Array('src_M_mapS_build-mapping-stylesheet.xsl', 
+				'src_M_mappingsuppresstrueS_build-mapping-stylesheet.xsl', 
+				'src_M_mappingnotsource-valueorsource-value-prefixorsource-value-suffixS_build-mapping-stylesheet.xsl', 
+				'src_M_mappingtarget-attribute-valuenottarget-attributeorglobal-target-attributeS_build-mapping-stylesheet.xsl', 
+				'src_M_mappingS_build-mapping-stylesheet.xsl', 
+				'src_M_mappingnottarget-elementS_build-mapping-stylesheet.xsl', 
+				'src_M_source-valueS_build-mapping-stylesheet.xsl', 
+				'src_M_source-value-prefixS_build-mapping-stylesheet.xsl', 
+				'src_M_source-value-suffixS_build-mapping-stylesheet.xsl', 
+				'src_M_mappingM_copy-attributesS_build-mapping-stylesheet.xsl', 
+				'src_M_mappingtarget-attribute-valueM_copy-attributesS_build-mapping-stylesheet.xsl', 
+				'src_M_mappingtarget-attribute-valuetarget-attributeglobal-target-attribute1source-attributedefault-source-attribute1M_copy-attributesS_build-mapping-stylesheet.xsl', 
+				'src_M_target-attribute-valueS_build-mapping-stylesheet.xsl', 
+				'src_M_mappingM_generate-elementsS_build-mapping-stylesheet.xsl', 
+				'src_M_mappingnottarget-elementM_generate-elementsS_build-mapping-stylesheet.xsl', 
+				'src_M_hintS_build-mapping-stylesheet.xsl', 
+				'src_M_heading-levelS_build-mapping-stylesheet.xsl', 
+				'src_V_default-source-elementS_build-mapping-stylesheet.xsl', 
+				'src_V_default-source-attributeS_build-mapping-stylesheet.xsl', 
+				'src_V_global-target-attributeS_build-mapping-stylesheet.xsl', 
+				'src_O_S_build-mapping-stylesheet.xsl');
+
+        
+        
+        var referencesBoxes= new Array('refs_M_mappingtarget-attribute-valuenottarget-attributeorglobal-target-attributeS_build-mapping-stylesheet.xsl', 
+				'refs_M_source-valueS_build-mapping-stylesheet.xsl', 
+				'refs_M_source-value-prefixS_build-mapping-stylesheet.xsl', 
+				'refs_M_source-value-suffixS_build-mapping-stylesheet.xsl', 
+				'refs_M_mappingtarget-attribute-valuetarget-attributeglobal-target-attribute1source-attributedefault-source-attribute1M_copy-attributesS_build-mapping-stylesheet.xsl', 
+				'refs_M_target-attribute-valueS_build-mapping-stylesheet.xsl');
+
+        
+        
+        
+        
+        var button_prefix = 'bt_';
+        
+        /**
+        * Get all DIV elements with a specified class name.
+        *
+        * @param className The class name. 
+        */
+        function getElementsByClassName(className) {
+            var results = [];
+    
+             if (document.getElementsByClassName == undefined) {
+                var allElements = document.getElementsByTagName("div");
+                var element;
+                for (var i = 0; i < allElements.length; i++) {
+                    var element = allElements[i];
+                	var elementClass = element.className;
+                	if (elementClass == className) { 
+                		results.push(element);
+                	}
+                }
+             } else {
+                results = document.getElementsByClassName(className);
+             }
+    
+            return results;
+        }
+            
+        /**
+        * Returns an element in the current HTML document.
+        *
+        * @param elementID Identifier of HTML element
+        * @return               HTML element object
+        */
+        function getElementObject(elementID) {
+            var elemObj = null;
+            if (document.getElementById) {
+                elemObj = document.getElementById(elementID);
+            }
+            return elemObj;
+        }
+        
+        /**
+        * Switches the state of a collapseable box, e.g.
+        * if it's opened, it'll be closed, and vice versa.
+        *
+        * @param boxID Identifier of box
+        */
+        function switchState(boxID) {
+            var boxObj = getElementObject(boxID);
+            var buttonObj = getElementObject(button_prefix + boxID);
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else if (boxObj.style.display == "none") {
+                // Box is closed, so open it
+                openBox(boxObj, buttonObj);
+            } else if (boxObj.style.display == "block") {
+                // Box is opened, so close it
+                closeBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+        * Opens a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function openBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "block";
+                
+                // Change text of button
+                if (boxObj.style.display == "block") {
+                    buttonObj.src = "img/btM.gif";
+                }
+            }
+        }
+        
+        /**
+        * Closes a collapseable box.
+        *
+        * @param boxObj       Collapseable box
+        * @param buttonObj Button controlling box
+        */
+        function closeBox(boxObj, buttonObj) {
+            if (boxObj == null || buttonObj == null) {
+                // Box or button not found
+            } else {
+                // Change 'display' CSS property of box
+                boxObj.style.display = "none";
+                
+                // Change text of button
+                if (boxObj.style.display == "none") {
+                    buttonObj.src = "img/btP.gif";
+                }
+            }
+        }
+
+       /**
+        * Switch between the compact list representation and the clasic list representation.
+        */
+       function switchMode(checkBox) {
+            if (checkBox == null) {
+                // Checkbox not found
+            } else if (checkBox.checked == 1) {
+                // Compact mode
+                var divs = getElementsByClassName('refItemBlock');
+                for (var i = 0; i < divs.length; i ++) {
+                    divs[i].style.display = "inline";
+                    var children = divs[i].children;
+                    var refItemSep = children[children.length - 1];
+                    if (refItemSep.className == "refItemSep") {
+                        children[children.length - 1].style.display = "inline";
+                    }
+                }
+            } else {
+                // Expanded mode
+                var divs = getElementsByClassName('refItemBlock');
+                for (var i = 0; i < divs.length; i ++) {
+                    divs[i].style.display = "block";
+                    var children = divs[i].children;
+                    var refItemSep = children[children.length - 1];
+                    if (refItemSep.className == "refItemSep") {
+                        children[children.length - 1].style.display = "none";
+                    }
+                }
+            }
+        }
+
+       function switchStateForAll(buttonObj, boxList) {
+            if (buttonObj == null) {
+                // button not found
+            } else if (buttonObj.value == "+") {
+                // Expand all
+                expandAll(boxList);
+                buttonObj.value = "-";
+            } else if (buttonObj.value == "-") {
+                // Collapse all
+                collapseAll(boxList);
+                buttonObj.value = "+";
+            }
+        }
+        
+        /**
+        * Closes all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function collapseAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                closeBox(boxObj, buttonObj);
+            }
+        }
+            
+        /**
+        * Open all boxes in a given list.
+        *
+        * @param boxList Array of box IDs
+        */
+        function expandAll(boxList) {
+            var idx;
+            for (idx = 0; idx < boxList.length; idx++) {
+                var boxObj = getElementObject(boxList[idx]);
+                var buttonObj = getElementObject(button_prefix + boxList[idx]);
+                openBox(boxObj, buttonObj);
+            }
+        }
+        
+        /**
+         * Update the message presented in the title of the html page.
+         * - If the documentation was splited by namespace we present something like: "Documentation for namespace 'ns'"
+         * - If the documentation was splited by location we present somehing like: "Documentation for 'Schema.xsd'"
+         * - If no split we always present: "Documentation for 'MainSchema.xsd'"
+         */
+        function updPT(message) {
+            top.document.title = "Stylesheet documentation for: " + message;
+        }
+        
+          
+                    
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function findAndFloat(id, x_displacement, y_displacement){
+
+            var element = getElementObject(id);            
+            
+            window[id + "_obj"] = element;
+            
+            if(document.layers) {
+               element.style = element;
+            }
+            
+            element.current_y = y_displacement;      
+            element.first_time = true;
+         
+            element.floatElement = function(){
+               // It may be closed by an user action.
+                
+               // Target X and Y coordinates.
+               var x, y;
+               
+               var myWidth = 0, myHeight = 0;
+               if( typeof( window.innerWidth ) == 'number' ) {
+                  //Non-IE
+                  myWidth = window.innerWidth;
+                  myHeight = window.innerHeight;
+               } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+                  //IE 6+ in 'standards compliant mode'
+                  myWidth = document.documentElement.clientWidth;
+                  myHeight = document.documentElement.clientHeight;
+               } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+                  //IE 4 compatible
+                  myWidth = document.body.clientWidth;
+                  myHeight = document.body.clientHeight;
+               }
+               
+               
+               x = myWidth - x_displacement;
+               
+               var ns = (navigator.appName.indexOf("Netscape") != -1);               
+               y = ns ? pageYOffset : document.documentElement && document.documentElement.scrollTop ? 
+                  document.documentElement.scrollTop : document.body.scrollTop;               
+               y = y + y_displacement;               
+               
+               // The current y is the current coordinate of the floating element.
+               // This should be at the limit the y target coordinate.
+               this.current_y += (y - this.current_y)/1.25;
+               
+               // Add the pixels constant after the values
+               // and move the element.
+               var px = document.layers ? "" : "px";
+               this.style.left =  x + px;
+               this.style.top =  this.current_y + px;
+                              
+               setTimeout(this.id + "_obj.floatElement()", 100);
+            }
+            
+            element.floatElement();
+            return element;
+          }
+
+         /**
+          * Finds an HTML element by its ID and makes it floatable over the normal content.
+          *
+          * @param x_displacement The difference in pixels to the right side of the window from 
+          *           the left side of the element.
+          * @param y_displacement The difference in pixels to the right side of the window from 
+          *           the top of the element.          
+          */
+         function selectTOCGroupBy(id){
+         var selectIds = new Array('toc_group_by_location', 'toc_group_by_component_type', 'toc_group_by_namespace', 'toc_group_by_mode');
+            // Make all the tabs invisible.
+            for (i = 0; i < 4; i++){
+               var tab = getElementObject(selectIds[i]);
+               tab.style.display = 'none';
+            }
+            var selTab = getElementObject(id);
+            selTab.style.display = 'block';            
+         }
+          
+
+    
+                    //--></script></head>
+   <body>
+      <div id="global_controls" class="globalControls" style="position:absolute;right:0;">
+         <table class="rt">
+            <tr>
+               <td class="rt_cTL"></td>
+               <td class="rt_lT"></td>
+               <td class="rt_cTR"></td>
+            </tr>
+            <tr>
+               <td class="rt_lL"></td>
+               <td class="rt_cnt">
+                  <h3>Mode:</h3>
+                  <table>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchMode(this);" class="control" /></span><span class="globalControlName">Compact lists</span></td>
+                     </tr>
+                  </table>
+                  <h3>Showing:</h3>
+                  <table>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, docBoxes);" class="control" /></span><span class="globalControlName">Documentation
+                              </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, parametersBoxes);" class="control" /></span><span class="globalControlName">Parameters </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, usedByBoxes);" class="control" /></span><span class="globalControlName">Used by </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, referencesBoxes);" class="control" /></span><span class="globalControlName">References </span></td>
+                     </tr>
+                     <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, sourceBoxes);" class="control" /></span><span class="globalControlName">Source </span></td>
+                     </tr>
+                  </table>
+                  <div align="right"><span><input type="button" onclick="getElementObject('global_controls').style.display = 'none';" value="Close" /></span></div>
+               </td>
+               <td class="rt_lR"></td>
+            </tr>
+            <tr>
+               <td class="rt_cBL"></td>
+               <td class="rt_lB"></td>
+               <td class="rt_cBR"></td>
+            </tr>
+         </table>
+      </div>
+      <h2><a id="INDEX">Table of Contents</a></h2>
+      <div class="toc">
+         <form action="none">
+            <div><span> Group by: <select id="selectTOC" onchange="selectTOCGroupBy(this.options[this.selectedIndex].value);">
+                     <option value="toc_group_by_location" selected="selected">Location</option>
+                     <option value="toc_group_by_component_type">Component Type</option>
+                     <option value="toc_group_by_namespace">Namespace</option>
+                     <option value="toc_group_by_mode">Mode</option></select></span></div>
+         </form>
+         <div class="level1" id="toc_group_by_namespace" style="display:none">
+            <div>
+               <div class="level2">
+                  <p><input id="bt_boxIdNamespace1" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace1');" class="control" /><span class="indexGroupTitle">No namespace</span></p>
+                  <div id="boxIdNamespace1" style="display:block">
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cTL"></td>
+                              <td class="rt_lT"></td>
+                              <td class="rt_cTR"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lL"></td>
+                              <td class="rt_cnt">
+                                 <div class="componentGroupTitle"><input id="bt_boxIdNamespace1template" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace1template');" class="control" />Templates
+                                 </div>
+                                 <div id="boxIdNamespace1template" style="display:block">
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_heading-levelS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">@heading-level</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_hintS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">@hint</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_source-valueS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">@source-value</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_source-value-prefixS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">@source-value-prefix</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_source-value-suffixS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">@source-value-suffix</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_target-attribute-valueS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">@target-attribute-value</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mapS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">map</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingsuppresstrueS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping[@suppress='true']</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingtarget-attribute-valuenottarget-attributeorglobal-target-attributeS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping[@target-attribute-value][not(@target-attribute or $global-target-attribute)]</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingnotsource-valueorsource-value-prefixorsource-value-suffixS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping[not(@source-value or @source-value-prefix or @source-value-suffix)]</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingnottarget-elementS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping[not(@target-element)]</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingM_copy-attributesS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping</span><span class="mdRf">copy-attributes</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingtarget-attribute-valueM_copy-attributesS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping[@target-attribute-value]</span><span class="mdRf">copy-attributes</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingtarget-attribute-valuetarget-attributeglobal-target-attribute1source-attributedefault-source-attribute1M_copy-attributesS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping[@target-attribute-value]   [(@target-attribute, $global-target-attribute)[1]
+                                             = (@source-attribute, $default-source-attribute)[1]]</span><span class="mdRf">copy-attributes</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingM_generate-elementsS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping</span><span class="mdRf">generate-elements</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingnottarget-elementM_generate-elementsS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping[not(@target-element)]</span><span class="mdRf">generate-elements</span></a></div>
+                                 </div>
+                              </td>
+                              <td class="rt_lR"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cBL"></td>
+                              <td class="rt_lB"></td>
+                              <td class="rt_cBR"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cTL"></td>
+                              <td class="rt_lT"></td>
+                              <td class="rt_cTR"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lL"></td>
+                              <td class="rt_cnt">
+                                 <div class="componentGroupTitle"><input id="bt_boxIdNamespace1variable" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace1variable');" class="control" />Variables
+                                 </div>
+                                 <div id="boxIdNamespace1variable" style="display:block">
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#V_default-source-attributeS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="cRfI">default-source-attribute</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#V_default-source-elementS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="cRfI">default-source-element</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#V_global-target-attributeS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="cRfI">global-target-attribute</span></a></div>
+                                 </div>
+                              </td>
+                              <td class="rt_lR"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cBL"></td>
+                              <td class="rt_lB"></td>
+                              <td class="rt_cBR"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cTL"></td>
+                              <td class="rt_lT"></td>
+                              <td class="rt_cTR"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lL"></td>
+                              <td class="rt_cnt">
+                                 <div class="componentGroupTitle"><input id="bt_boxIdNamespace1output" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNamespace1output');" class="control" />Output
+                                 </div>
+                                 <div id="boxIdNamespace1output" style="display:block">
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#O_S_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="cRfI">(default)</span></a></div>
+                                 </div>
+                              </td>
+                              <td class="rt_lR"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cBL"></td>
+                              <td class="rt_lB"></td>
+                              <td class="rt_cBR"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div style="clear:left"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="level1" id="toc_group_by_mode" style="display:none">
+            <div class="level2">
+               <p><input id="bt_boxIdMode1" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdMode1');" class="control" /><span class="indexGroupTitle">#default</span></p>
+               <div id="boxIdMode1" style="display:block">
+                  <div class="horizontalLayout">
+                     <table class="rt">
+                        <tr>
+                           <td class="rt_cTL"></td>
+                           <td class="rt_lT"></td>
+                           <td class="rt_cTR"></td>
+                        </tr>
+                        <tr>
+                           <td class="rt_lL"></td>
+                           <td class="rt_cnt">
+                              <div class="componentGroupTitle"><input id="bt_boxIdMode1template" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdMode1template');" class="control" />Templates
+                              </div>
+                              <div id="boxIdMode1template" style="display:block">
+                                 <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_heading-levelS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">@heading-level</span></a></div>
+                                 <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_hintS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">@hint</span></a></div>
+                                 <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_source-valueS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">@source-value</span></a></div>
+                                 <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_source-value-prefixS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">@source-value-prefix</span></a></div>
+                                 <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_source-value-suffixS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">@source-value-suffix</span></a></div>
+                                 <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_target-attribute-valueS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">@target-attribute-value</span></a></div>
+                                 <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mapS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">map</span></a></div>
+                                 <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping</span></a></div>
+                                 <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingsuppresstrueS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping[@suppress='true']</span></a></div>
+                                 <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingtarget-attribute-valuenottarget-attributeorglobal-target-attributeS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping[@target-attribute-value][not(@target-attribute or $global-target-attribute)]</span></a></div>
+                                 <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingnotsource-valueorsource-value-prefixorsource-value-suffixS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping[not(@source-value or @source-value-prefix or @source-value-suffix)]</span></a></div>
+                                 <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingnottarget-elementS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping[not(@target-element)]</span></a></div>
+                              </div>
+                           </td>
+                           <td class="rt_lR"></td>
+                        </tr>
+                        <tr>
+                           <td class="rt_cBL"></td>
+                           <td class="rt_lB"></td>
+                           <td class="rt_cBR"></td>
+                        </tr>
+                     </table>
+                  </div>
+                  <div style="clear:left"></div>
+               </div>
+            </div>
+            <div class="level2">
+               <p><input id="bt_boxIdMode2" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdMode2');" class="control" /><span class="indexGroupTitle">copy-attributes</span></p>
+               <div id="boxIdMode2" style="display:block">
+                  <div class="horizontalLayout">
+                     <table class="rt">
+                        <tr>
+                           <td class="rt_cTL"></td>
+                           <td class="rt_lT"></td>
+                           <td class="rt_cTR"></td>
+                        </tr>
+                        <tr>
+                           <td class="rt_lL"></td>
+                           <td class="rt_cnt">
+                              <div class="componentGroupTitle"><input id="bt_boxIdMode2template" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdMode2template');" class="control" />Templates
+                              </div>
+                              <div id="boxIdMode2template" style="display:block">
+                                 <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingM_copy-attributesS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping</span><span class="mdRf">copy-attributes</span></a></div>
+                                 <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingtarget-attribute-valueM_copy-attributesS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping[@target-attribute-value]</span><span class="mdRf">copy-attributes</span></a></div>
+                                 <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingtarget-attribute-valuetarget-attributeglobal-target-attribute1source-attributedefault-source-attribute1M_copy-attributesS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping[@target-attribute-value]   [(@target-attribute, $global-target-attribute)[1]
+                                          = (@source-attribute, $default-source-attribute)[1]]</span><span class="mdRf">copy-attributes</span></a></div>
+                              </div>
+                           </td>
+                           <td class="rt_lR"></td>
+                        </tr>
+                        <tr>
+                           <td class="rt_cBL"></td>
+                           <td class="rt_lB"></td>
+                           <td class="rt_cBR"></td>
+                        </tr>
+                     </table>
+                  </div>
+                  <div style="clear:left"></div>
+               </div>
+            </div>
+            <div class="level2">
+               <p><input id="bt_boxIdMode3" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdMode3');" class="control" /><span class="indexGroupTitle">generate-elements</span></p>
+               <div id="boxIdMode3" style="display:block">
+                  <div class="horizontalLayout">
+                     <table class="rt">
+                        <tr>
+                           <td class="rt_cTL"></td>
+                           <td class="rt_lT"></td>
+                           <td class="rt_cTR"></td>
+                        </tr>
+                        <tr>
+                           <td class="rt_lL"></td>
+                           <td class="rt_cnt">
+                              <div class="componentGroupTitle"><input id="bt_boxIdMode3template" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdMode3template');" class="control" />Templates
+                              </div>
+                              <div id="boxIdMode3template" style="display:block">
+                                 <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingM_generate-elementsS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping</span><span class="mdRf">generate-elements</span></a></div>
+                                 <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingnottarget-elementM_generate-elementsS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping[not(@target-element)]</span><span class="mdRf">generate-elements</span></a></div>
+                              </div>
+                           </td>
+                           <td class="rt_lR"></td>
+                        </tr>
+                        <tr>
+                           <td class="rt_cBL"></td>
+                           <td class="rt_lB"></td>
+                           <td class="rt_cBR"></td>
+                        </tr>
+                     </table>
+                  </div>
+                  <div style="clear:left"></div>
+               </div>
+            </div>
+            <div class="level2">
+               <p><input id="bt_boxIdNoMode" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNoMode');" class="control" /><span class="indexGroupTitle"> Components without mode </span></p>
+               <div id="boxIdNoMode" style="display:block">
+                  <div class="horizontalLayout">
+                     <table class="rt">
+                        <tr>
+                           <td class="rt_cTL"></td>
+                           <td class="rt_lT"></td>
+                           <td class="rt_cTR"></td>
+                        </tr>
+                        <tr>
+                           <td class="rt_lL"></td>
+                           <td class="rt_cnt">
+                              <div class="componentGroupTitle"><input id="bt_boxIdNoModevariable" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNoModevariable');" class="control" />Variables
+                              </div>
+                              <div id="boxIdNoModevariable" style="display:block">
+                                 <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#V_default-source-attributeS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="cRfI">default-source-attribute</span></a></div>
+                                 <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#V_default-source-elementS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="cRfI">default-source-element</span></a></div>
+                                 <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#V_global-target-attributeS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="cRfI">global-target-attribute</span></a></div>
+                              </div>
+                           </td>
+                           <td class="rt_lR"></td>
+                        </tr>
+                        <tr>
+                           <td class="rt_cBL"></td>
+                           <td class="rt_lB"></td>
+                           <td class="rt_cBR"></td>
+                        </tr>
+                     </table>
+                  </div>
+                  <div class="horizontalLayout">
+                     <table class="rt">
+                        <tr>
+                           <td class="rt_cTL"></td>
+                           <td class="rt_lT"></td>
+                           <td class="rt_cTR"></td>
+                        </tr>
+                        <tr>
+                           <td class="rt_lL"></td>
+                           <td class="rt_cnt">
+                              <div class="componentGroupTitle"><input id="bt_boxIdNoModeoutput" type="image" value="-" src="img/btM.gif" onclick="switchState('boxIdNoModeoutput');" class="control" />Output
+                              </div>
+                              <div id="boxIdNoModeoutput" style="display:block">
+                                 <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#O_S_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="cRfI">(default)</span></a></div>
+                              </div>
+                           </td>
+                           <td class="rt_lR"></td>
+                        </tr>
+                        <tr>
+                           <td class="rt_cBL"></td>
+                           <td class="rt_lB"></td>
+                           <td class="rt_cBR"></td>
+                        </tr>
+                     </table>
+                  </div>
+                  <div style="clear:left"></div>
+               </div>
+            </div>
+         </div>
+         <div class="level1" id="toc_group_by_component_type" style="display:none">
+            <div>
+               <div class="horizontalLayout">
+                  <table class="rt">
+                     <tr>
+                        <td class="rt_cTL"></td>
+                        <td class="rt_lT"></td>
+                        <td class="rt_cTR"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_lL"></td>
+                        <td class="rt_cnt">
+                           <div class="componentGroupTitle"><input id="bt_template" type="image" value="-" src="img/btM.gif" onclick="switchState('template');" class="control" />Templates
+                           </div>
+                           <div id="template" style="display:block">
+                              <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_heading-levelS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">@heading-level</span></a></div>
+                              <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_hintS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">@hint</span></a></div>
+                              <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_source-valueS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">@source-value</span></a></div>
+                              <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_source-value-prefixS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">@source-value-prefix</span></a></div>
+                              <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_source-value-suffixS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">@source-value-suffix</span></a></div>
+                              <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_target-attribute-valueS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">@target-attribute-value</span></a></div>
+                              <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mapS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">map</span></a></div>
+                              <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping</span></a></div>
+                              <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingsuppresstrueS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping[@suppress='true']</span></a></div>
+                              <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingtarget-attribute-valuenottarget-attributeorglobal-target-attributeS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping[@target-attribute-value][not(@target-attribute or $global-target-attribute)]</span></a></div>
+                              <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingnotsource-valueorsource-value-prefixorsource-value-suffixS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping[not(@source-value or @source-value-prefix or @source-value-suffix)]</span></a></div>
+                              <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingnottarget-elementS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping[not(@target-element)]</span></a></div>
+                              <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingM_copy-attributesS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping</span><span class="mdRf">copy-attributes</span></a></div>
+                              <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingtarget-attribute-valueM_copy-attributesS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping[@target-attribute-value]</span><span class="mdRf">copy-attributes</span></a></div>
+                              <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingtarget-attribute-valuetarget-attributeglobal-target-attribute1source-attributedefault-source-attribute1M_copy-attributesS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping[@target-attribute-value]   [(@target-attribute, $global-target-attribute)[1]
+                                       = (@source-attribute, $default-source-attribute)[1]]</span><span class="mdRf">copy-attributes</span></a></div>
+                              <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingM_generate-elementsS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping</span><span class="mdRf">generate-elements</span></a></div>
+                              <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingnottarget-elementM_generate-elementsS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping[not(@target-element)]</span><span class="mdRf">generate-elements</span></a></div>
+                           </div>
+                        </td>
+                        <td class="rt_lR"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_cBL"></td>
+                        <td class="rt_lB"></td>
+                        <td class="rt_cBR"></td>
+                     </tr>
+                  </table>
+               </div>
+               <div class="horizontalLayout">
+                  <table class="rt">
+                     <tr>
+                        <td class="rt_cTL"></td>
+                        <td class="rt_lT"></td>
+                        <td class="rt_cTR"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_lL"></td>
+                        <td class="rt_cnt">
+                           <div class="componentGroupTitle"><input id="bt_variable" type="image" value="-" src="img/btM.gif" onclick="switchState('variable');" class="control" />Variables
+                           </div>
+                           <div id="variable" style="display:block">
+                              <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#V_default-source-attributeS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="cRfI">default-source-attribute</span></a></div>
+                              <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#V_default-source-elementS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="cRfI">default-source-element</span></a></div>
+                              <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#V_global-target-attributeS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="cRfI">global-target-attribute</span></a></div>
+                           </div>
+                        </td>
+                        <td class="rt_lR"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_cBL"></td>
+                        <td class="rt_lB"></td>
+                        <td class="rt_cBR"></td>
+                     </tr>
+                  </table>
+               </div>
+               <div class="horizontalLayout">
+                  <table class="rt">
+                     <tr>
+                        <td class="rt_cTL"></td>
+                        <td class="rt_lT"></td>
+                        <td class="rt_cTR"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_lL"></td>
+                        <td class="rt_cnt">
+                           <div class="componentGroupTitle"><input id="bt_output" type="image" value="-" src="img/btM.gif" onclick="switchState('output');" class="control" />Output
+                           </div>
+                           <div id="output" style="display:block">
+                              <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#O_S_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="cRfI">(default)</span></a></div>
+                           </div>
+                        </td>
+                        <td class="rt_lR"></td>
+                     </tr>
+                     <tr>
+                        <td class="rt_cBL"></td>
+                        <td class="rt_lB"></td>
+                        <td class="rt_cBR"></td>
+                     </tr>
+                  </table>
+               </div>
+               <div style="clear:left"></div>
+            </div>
+         </div>
+         <div class="level1" id="toc_group_by_location" style="display:block">
+            <div>
+               <div class="level2">
+                  <p><input id="bt_build-mapping-stylesheet.xsl" type="image" value="-" src="img/btM.gif" onclick="switchState('build-mapping-stylesheet.xsl');" class="control" /><span class="indexGroupTitle"><a href="build-mapping-stylesheet.html#build-mapping-stylesheet.xsl" target="_self" title="No namespace">build-mapping-stylesheet.xsl</a><em> - main file</em></span></p>
+                  <div id="build-mapping-stylesheet.xsl" style="display:block">
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cTL"></td>
+                              <td class="rt_lT"></td>
+                              <td class="rt_cTR"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lL"></td>
+                              <td class="rt_cnt">
+                                 <div class="componentGroupTitle"><input id="bt_build-mapping-stylesheet.xsltemplate" type="image" value="-" src="img/btM.gif" onclick="switchState('build-mapping-stylesheet.xsltemplate');" class="control" />Templates
+                                 </div>
+                                 <div id="build-mapping-stylesheet.xsltemplate" style="display:block">
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_heading-levelS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">@heading-level</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_hintS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">@hint</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_source-valueS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">@source-value</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_source-value-prefixS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">@source-value-prefix</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_source-value-suffixS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">@source-value-suffix</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_target-attribute-valueS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">@target-attribute-value</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mapS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">map</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingsuppresstrueS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping[@suppress='true']</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingtarget-attribute-valuenottarget-attributeorglobal-target-attributeS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping[@target-attribute-value][not(@target-attribute or $global-target-attribute)]</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingnotsource-valueorsource-value-prefixorsource-value-suffixS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping[not(@source-value or @source-value-prefix or @source-value-suffix)]</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingnottarget-elementS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping[not(@target-element)]</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingM_copy-attributesS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping</span><span class="mdRf">copy-attributes</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingtarget-attribute-valueM_copy-attributesS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping[@target-attribute-value]</span><span class="mdRf">copy-attributes</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingtarget-attribute-valuetarget-attributeglobal-target-attribute1source-attributedefault-source-attribute1M_copy-attributesS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping[@target-attribute-value]   [(@target-attribute, $global-target-attribute)[1]
+                                             = (@source-attribute, $default-source-attribute)[1]]</span><span class="mdRf">copy-attributes</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingM_generate-elementsS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping</span><span class="mdRf">generate-elements</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#M_mappingnottarget-elementM_generate-elementsS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="mRfI">mapping[not(@target-element)]</span><span class="mdRf">generate-elements</span></a></div>
+                                 </div>
+                              </td>
+                              <td class="rt_lR"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cBL"></td>
+                              <td class="rt_lB"></td>
+                              <td class="rt_cBR"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cTL"></td>
+                              <td class="rt_lT"></td>
+                              <td class="rt_cTR"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lL"></td>
+                              <td class="rt_cnt">
+                                 <div class="componentGroupTitle"><input id="bt_build-mapping-stylesheet.xslvariable" type="image" value="-" src="img/btM.gif" onclick="switchState('build-mapping-stylesheet.xslvariable');" class="control" />Variables
+                                 </div>
+                                 <div id="build-mapping-stylesheet.xslvariable" style="display:block">
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#V_default-source-attributeS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="cRfI">default-source-attribute</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#V_default-source-elementS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="cRfI">default-source-element</span></a></div>
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#V_global-target-attributeS_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="cRfI">global-target-attribute</span></a></div>
+                                 </div>
+                              </td>
+                              <td class="rt_lR"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cBL"></td>
+                              <td class="rt_lB"></td>
+                              <td class="rt_cBR"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="horizontalLayout">
+                        <table class="rt">
+                           <tr>
+                              <td class="rt_cTL"></td>
+                              <td class="rt_lT"></td>
+                              <td class="rt_cTR"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_lL"></td>
+                              <td class="rt_cnt">
+                                 <div class="componentGroupTitle"><input id="bt_build-mapping-stylesheet.xsloutput" type="image" value="-" src="img/btM.gif" onclick="switchState('build-mapping-stylesheet.xsloutput');" class="control" />Output
+                                 </div>
+                                 <div id="build-mapping-stylesheet.xsloutput" style="display:block">
+                                    <div class="indentWrapDiv"><a href="build-mapping-stylesheet.html#O_S_build-mapping-stylesheet.xsl" target="_self" class="iRf" title="No namespace"><span class="cRfI">(default)</span></a></div>
+                                 </div>
+                              </td>
+                              <td class="rt_lR"></td>
+                           </tr>
+                           <tr>
+                              <td class="rt_cBL"></td>
+                              <td class="rt_lB"></td>
+                              <td class="rt_cBR"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div style="clear:left"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div><a id="build-mapping-stylesheet.xsl"></a><div class="cmpT">Main stylesheet
+         <span class="qname">build-mapping-stylesheet.xsl</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">Stylesheet version</td>
+                        <td>2.0</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="M_mapS_build-mapping-stylesheet.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">map</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_mapS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_mapS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_mapS_build-mapping-stylesheet.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 			
+                                 <p>This template matches the <b>map</b> elements of the input and creates the
+                                    				stylesheet element for output. We set the default XPath namespace to the matching
+                                    				namespace to make the constructed XPath statements simpler. We include an identity
+                                    				transform as any element not processed by our constructed stylesheet must be passed
+                                    				through unchanged. We do force the output to be UTF-8 regardless of input.
+                                 </p>
+                                 		
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>map</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>#default</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_mapS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_mapS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_mapS_build-mapping-stylesheet.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"map"</span><span class="tAN"> as=</span><span class="tAV">"element()"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;axsl:stylesheet</span><span class="tAN"> xpath-default-namespace=</span><span class="tAV">"{@ns}"</span><span class="tAN"> version=</span><span class="tAV">"2.0"</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:namespace</span><span class="tAN"> name=</span><span class="tAV">""</span><span class="tAN"> select=</span><span class="tAV">"@ns"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;axsl:output</span><span class="tAN"> method=</span><span class="tAV">"xml"</span><span class="tAN"> encoding=</span><span class="tAV">"UTF-8"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;axsl:template</span><span class="tAN"> match=</span><span class="tAV">"@*|node()"</span><span class="tAN"> mode=</span><span class="tAV">"#all"</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;axsl:copy</span><span class="tEl">&gt;</span><span class="tI">
+        </span><span class="tEl">&lt;axsl:apply-templates</span><span class="tAN"> select=</span><span class="tAV">"@*|node()"</span><span class="tAN"> mode=</span><span class="tAV">"#current"</span><span class="tEl">/&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;/axsl:copy&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/axsl:template&gt;</span><span class="tI">
+    </span><span class="tC">&lt;!-- process all the mapping elements. --&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:apply-templates</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/axsl:stylesheet&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="M_mappingsuppresstrueS_build-mapping-stylesheet.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">mapping[@suppress='true']</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_mappingsuppresstrueS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_mappingsuppresstrueS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_mappingsuppresstrueS_build-mapping-stylesheet.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 			
+                                 <p>These templates convert a <b>mapping</b> element to an
+                                    					<b>xsl:template</b> element. Each one processes a variant on the input.
+                                    				The operation is the same on each. A function is called to generate the XPath
+                                    				statement for the template and then <b>generate-elements</b>is called.
+                                    					<b>generate-elements</b> is passed a sequence of elements to create and a
+                                    				flag indicating that the process is starting.
+                                 </p>
+                                 			
+                                 <p>The suppress attribute is handled by a simple template for each type of input
+                                    				attribute.
+                                 </p>
+                                 		
+                              </div>
+                              <hr />
+                              <div>
+                                 <h3>Description</h3>
+                                 <p>When the <b>suppress</b> attribute is set, just suppress the content. Use a
+                                    			very high priority to ensure it executes. 
+                                 </p>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>mapping[@suppress='true']</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>#default</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Priority</td>
+                        <td>20</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_mappingsuppresstrueS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_mappingsuppresstrueS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_mappingsuppresstrueS_build-mapping-stylesheet.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"mapping[@suppress='true']"</span><span class="tAN"> priority=</span><span class="tAV">"20"</span><span class="tAN"> as=</span><span class="tAV">"element()"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;axsl:template</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:apply-templates</span><span class="tAN"> select=</span><span class="tAV">"@source-value|@source-value-prefix|@source-value-suffix"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/axsl:template&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="M_mappingnotsource-valueorsource-value-prefixorsource-value-suffixS_build-mapping-stylesheet.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">mapping[not(@source-value or @source-value-prefix or @source-value-suffix)]</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_mappingnotsource-valueorsource-value-prefixorsource-value-suffixS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_mappingnotsource-valueorsource-value-prefixorsource-value-suffixS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_mappingnotsource-valueorsource-value-prefixorsource-value-suffixS_build-mapping-stylesheet.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 <p>Abort if we have an input element with no source-value* attribute.</p>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>mapping[not(@source-value or @source-value-prefix or @source-value-suffix)]</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>#default</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Priority</td>
+                        <td>21</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_mappingnotsource-valueorsource-value-prefixorsource-value-suffixS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_mappingnotsource-valueorsource-value-prefixorsource-value-suffixS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_mappingnotsource-valueorsource-value-prefixorsource-value-suffixS_build-mapping-stylesheet.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"mapping[not(@source-value or @source-value-prefix or @source-value-suffix)]"</span><span class="tAN"> priority=</span><span class="tAV">"21"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:message</span><span class="tAN"> terminate=</span><span class="tAV">"yes"</span><span class="tXSLEl">&gt;</span><span class="tT" style="white-space:normal">Unable to continue - mapping with no source value found.</span><span class="tXSLEl">&lt;/xsl:message&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="M_mappingtarget-attribute-valuenottarget-attributeorglobal-target-attributeS_build-mapping-stylesheet.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">mapping[@target-attribute-value][not(@target-attribute or $global-target-attribute)]</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_mappingtarget-attribute-valuenottarget-attributeorglobal-target-attributeS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_mappingtarget-attribute-valuenottarget-attributeorglobal-target-attributeS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_mappingtarget-attribute-valuenottarget-attributeorglobal-target-attributeS_build-mapping-stylesheet.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 <p>Abort if we have a mapping with target-attribute-value attribute but no defined
+                                    			target-attribute locally or globally.
+                                 </p>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>mapping[@target-attribute-value][not(@target-attribute or $global-target-attribute)]</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>#default</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">References</div>
+                           <div class="flR"><input id="bt_refs_M_mappingtarget-attribute-valuenottarget-attributeorglobal-target-attributeS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('refs_M_mappingtarget-attribute-valuenottarget-attributeorglobal-target-attributeS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="refs_M_mappingtarget-attribute-valuenottarget-attributeorglobal-target-attributeS_build-mapping-stylesheet.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Variable</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="build-mapping-stylesheet.html#V_global-target-attributeS_build-mapping-stylesheet.xsl" target="_self" title="No namespace">global-target-attribute</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Priority</td>
+                        <td>21</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_mappingtarget-attribute-valuenottarget-attributeorglobal-target-attributeS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_mappingtarget-attribute-valuenottarget-attributeorglobal-target-attributeS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_mappingtarget-attribute-valuenottarget-attributeorglobal-target-attributeS_build-mapping-stylesheet.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"mapping[@target-attribute-value][not(@target-attribute or $global-target-attribute)]"</span><span class="tAN"> priority=</span><span class="tAV">"21"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:message</span><span class="tAN"> terminate=</span><span class="tAV">"yes"</span><span class="tXSLEl">&gt;</span><span class="tT" style="white-space:normal">Unable to continue - with target attribute value but no target attribute.</span><span class="tXSLEl">&lt;/xsl:message&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="M_mappingS_build-mapping-stylesheet.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">mapping</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_mappingS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_mappingS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_mappingS_build-mapping-stylesheet.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 <p>Generate an xsl template from the mapping source.</p>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>mapping</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>#default</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_mappingS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_mappingS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_mappingS_build-mapping-stylesheet.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"mapping"</span><span class="tAN"> as=</span><span class="tAV">"element()"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;axsl:template</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:apply-templates</span><span class="tAN"> select=</span><span class="tAV">"@source-value|@source-value-prefix|@source-value-suffix"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:apply-templates</span><span class="tAN"> select=</span><span class="tAV">"."</span><span class="tAN"> mode=</span><span class="tAV">"generate-elements"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/axsl:template&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="M_mappingnottarget-elementS_build-mapping-stylesheet.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">mapping[not(@target-element)]</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_mappingnottarget-elementS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_mappingnottarget-elementS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_mappingnottarget-elementS_build-mapping-stylesheet.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 <p>Generate an xsl template from the mapping source. There is no target-element
+                                    		attribute so we copy the source element
+                                 </p>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>mapping[not(@target-element)]</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>#default</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Priority</td>
+                        <td>1</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_mappingnottarget-elementS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_mappingnottarget-elementS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_mappingnottarget-elementS_build-mapping-stylesheet.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"mapping[not(@target-element)]"</span><span class="tAN"> priority=</span><span class="tAV">"1"</span><span class="tAN"> as=</span><span class="tAV">"element()"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;axsl:template</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:apply-templates</span><span class="tAN"> select=</span><span class="tAV">"@source-value|@source-value-prefix|@source-value-suffix"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;axsl:copy</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;xsl:apply-templates</span><span class="tAN"> select=</span><span class="tAV">"."</span><span class="tAN"> mode=</span><span class="tAV">"generate-elements"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/axsl:copy&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/axsl:template&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="M_source-valueS_build-mapping-stylesheet.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">@source-value</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_source-valueS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_source-valueS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_source-valueS_build-mapping-stylesheet.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 <p>Create a match attribute for the output template based on the value of a source
+                                    			attribute
+                                 </p>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>@source-value</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>#default</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">References</div>
+                           <div class="flR"><input id="bt_refs_M_source-valueS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('refs_M_source-valueS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="refs_M_source-valueS_build-mapping-stylesheet.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Variables</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="build-mapping-stylesheet.html#V_default-source-attributeS_build-mapping-stylesheet.xsl" target="_self" title="No namespace">default-source-attribute</a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="build-mapping-stylesheet.html#V_default-source-elementS_build-mapping-stylesheet.xsl" target="_self" title="No namespace">default-source-element</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_source-valueS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_source-valueS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_source-valueS_build-mapping-stylesheet.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"@source-value"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"source-element"</span><span class="tAN"> select=</span><span class="tAV">"(../@source-element, $default-source-element)[1]"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"source-attribute"</span><span class="tAN"> select=</span><span class="tAV">"(../@source-attribute, $default-source-attribute)[1]"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:attribute</span><span class="tAN"> name=</span><span class="tAV">"match"</span><span class="tAN"> select=</span><span class="tAV">"concat($source-element, '[@', $source-attribute, ' = ''', ., ''']')"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="M_source-value-prefixS_build-mapping-stylesheet.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">@source-value-prefix</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_source-value-prefixS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_source-value-prefixS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_source-value-prefixS_build-mapping-stylesheet.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 <p>Create a match attribute for the output template based on the start of a source
+                                    			attribute
+                                 </p>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>@source-value-prefix</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>#default</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">References</div>
+                           <div class="flR"><input id="bt_refs_M_source-value-prefixS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('refs_M_source-value-prefixS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="refs_M_source-value-prefixS_build-mapping-stylesheet.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Variables</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="build-mapping-stylesheet.html#V_default-source-attributeS_build-mapping-stylesheet.xsl" target="_self" title="No namespace">default-source-attribute</a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="build-mapping-stylesheet.html#V_default-source-elementS_build-mapping-stylesheet.xsl" target="_self" title="No namespace">default-source-element</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_source-value-prefixS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_source-value-prefixS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_source-value-prefixS_build-mapping-stylesheet.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"@source-value-prefix"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"source-element"</span><span class="tAN"> select=</span><span class="tAV">"(../@source-element, $default-source-element)[1]"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"source-attribute"</span><span class="tAN"> select=</span><span class="tAV">"(../@source-attribute, $default-source-attribute)[1]"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:attribute</span><span class="tAN"> name=</span><span class="tAV">"match"</span><span class="tAN"> select=</span><span class="tAV">"concat($source-element, '[starts-with(@', $source-attribute, ',''', ., ''')]')"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="M_source-value-suffixS_build-mapping-stylesheet.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">@source-value-suffix</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_source-value-suffixS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_source-value-suffixS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_source-value-suffixS_build-mapping-stylesheet.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 <p>Create a match attribute for the output template based on the end of a source
+                                    			attribute
+                                 </p>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>@source-value-suffix</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>#default</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">References</div>
+                           <div class="flR"><input id="bt_refs_M_source-value-suffixS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('refs_M_source-value-suffixS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="refs_M_source-value-suffixS_build-mapping-stylesheet.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Variables</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="build-mapping-stylesheet.html#V_default-source-attributeS_build-mapping-stylesheet.xsl" target="_self" title="No namespace">default-source-attribute</a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="build-mapping-stylesheet.html#V_default-source-elementS_build-mapping-stylesheet.xsl" target="_self" title="No namespace">default-source-element</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_source-value-suffixS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_source-value-suffixS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_source-value-suffixS_build-mapping-stylesheet.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"@source-value-suffix"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"source-element"</span><span class="tAN"> select=</span><span class="tAV">"(../@source-element, $default-source-element)[1]"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"source-attribute"</span><span class="tAN"> select=</span><span class="tAV">"(../@source-attribute, $default-source-attribute)[1]"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:attribute</span><span class="tAN"> name=</span><span class="tAV">"match"</span><span class="tAN"> select=</span><span class="tAV">"concat($source-element, '[ends-with(@', $source-attribute, ',''', ., ''')]')"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="M_mappingM_copy-attributesS_build-mapping-stylesheet.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">mapping</span><span class="titleTemplateMode">copy-attributes</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_mappingM_copy-attributesS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_mappingM_copy-attributesS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_mappingM_copy-attributesS_build-mapping-stylesheet.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 <p>Generate the attributes on an output element. If there is no target-attribute-value
+                                    			attribute it's a simply copy.
+                                 </p>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>mapping</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>copy-attributes</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_mappingM_copy-attributesS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_mappingM_copy-attributesS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_mappingM_copy-attributesS_build-mapping-stylesheet.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"mapping"</span><span class="tAN"> mode=</span><span class="tAV">"copy-attributes"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;axsl:apply-templates</span><span class="tAN"> select=</span><span class="tAV">"@*[not(local-name() = 'id')]"</span><span class="tEl">/&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="M_mappingtarget-attribute-valueM_copy-attributesS_build-mapping-stylesheet.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">mapping[@target-attribute-value]</span><span class="titleTemplateMode">copy-attributes</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_mappingtarget-attribute-valueM_copy-attributesS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_mappingtarget-attribute-valueM_copy-attributesS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_mappingtarget-attribute-valueM_copy-attributesS_build-mapping-stylesheet.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>Generate the attributes on an output element. Create the target attribute as
+                                 			well.
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>mapping[@target-attribute-value]</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>copy-attributes</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_mappingtarget-attribute-valueM_copy-attributesS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_mappingtarget-attribute-valueM_copy-attributesS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_mappingtarget-attribute-valueM_copy-attributesS_build-mapping-stylesheet.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"mapping[@target-attribute-value]"</span><span class="tAN"> mode=</span><span class="tAV">"copy-attributes"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:apply-templates</span><span class="tAN"> select=</span><span class="tAV">"@target-attribute-value"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;axsl:apply-templates</span><span class="tAN"> select=</span><span class="tAV">"@*[not(local-name() = 'id')]"</span><span class="tEl">/&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="M_mappingtarget-attribute-valuetarget-attributeglobal-target-attribute1source-attributedefault-source-attribute1M_copy-attributesS_build-mapping-stylesheet.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">mapping[@target-attribute-value]   [(@target-attribute, $global-target-attribute)[1]
+            = (@source-attribute, $default-source-attribute)[1]]</span><span class="titleTemplateMode">copy-attributes</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_mappingtarget-attribute-valuetarget-attributeglobal-target-attribute1source-attributedefault-source-attribute1M_copy-attributesS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_mappingtarget-attribute-valuetarget-attributeglobal-target-attribute1source-attributedefault-source-attribute1M_copy-attributesS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_mappingtarget-attribute-valuetarget-attributeglobal-target-attribute1source-attributedefault-source-attribute1M_copy-attributesS_build-mapping-stylesheet.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>Generate the attributes on an output element. If the target attribute is the same
+                                 			as the source attribute (we are overriding the input value in other words), we
+                                 need to
+                                 			not copy it to the output. <b>If there is more than one attribute with the same local
+                                    				name as the target attribute, they will all be suppressed.</b></div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>mapping[@target-attribute-value]   [(@target-attribute, $global-target-attribute)[1]
+                           = (@source-attribute, $default-source-attribute)[1]]
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>copy-attributes</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">References</div>
+                           <div class="flR"><input id="bt_refs_M_mappingtarget-attribute-valuetarget-attributeglobal-target-attribute1source-attributedefault-source-attribute1M_copy-attributesS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('refs_M_mappingtarget-attribute-valuetarget-attributeglobal-target-attribute1source-attributedefault-source-attribute1M_copy-attributesS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="refs_M_mappingtarget-attribute-valuetarget-attributeglobal-target-attribute1source-attributedefault-source-attribute1M_copy-attributesS_build-mapping-stylesheet.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Variables</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="build-mapping-stylesheet.html#V_default-source-attributeS_build-mapping-stylesheet.xsl" target="_self" title="No namespace">default-source-attribute</a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="build-mapping-stylesheet.html#V_global-target-attributeS_build-mapping-stylesheet.xsl" target="_self" title="No namespace">global-target-attribute</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Priority</td>
+                        <td>1</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_mappingtarget-attribute-valuetarget-attributeglobal-target-attribute1source-attributedefault-source-attribute1M_copy-attributesS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_mappingtarget-attribute-valuetarget-attributeglobal-target-attribute1source-attributedefault-source-attribute1M_copy-attributesS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_mappingtarget-attribute-valuetarget-attributeglobal-target-attribute1source-attributedefault-source-attribute1M_copy-attributesS_build-mapping-stylesheet.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"mapping[@target-attribute-value]   [(@target-attribute, $global-target-attribute)[1] = (@source-attribute, $default-source-attribute)[1]]"</span><span class="tAN"> mode=</span><span class="tAV">"copy-attributes"</span><span class="tAN"> priority=</span><span class="tAV">"1"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"target-attribute"</span><span class="tAN"> select=</span><span class="tAV">"(@target-attribute, $global-target-attribute)[1]"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:apply-templates</span><span class="tAN"> select=</span><span class="tAV">"@target-attribute-value"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;axsl:apply-templates</span><span class="tAN"> select=</span><span class="tAV">"@*[not(local-name() = 'id')][not(local-name(.) = '{$target-attribute}')]"</span><span class="tEl">/&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="M_target-attribute-valueS_build-mapping-stylesheet.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">@target-attribute-value</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>@target-attribute-value</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>#default</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">References</div>
+                           <div class="flR"><input id="bt_refs_M_target-attribute-valueS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('refs_M_target-attribute-valueS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="refs_M_target-attribute-valueS_build-mapping-stylesheet.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Variable</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="build-mapping-stylesheet.html#V_global-target-attributeS_build-mapping-stylesheet.xsl" target="_self" title="No namespace">global-target-attribute</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_target-attribute-valueS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_target-attribute-valueS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_target-attribute-valueS_build-mapping-stylesheet.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"@target-attribute-value"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"target-attribute"</span><span class="tAN"> select=</span><span class="tAV">"(../@target-attribute, $global-target-attribute)[1]"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;axsl:attribute</span><span class="tAN"> name=</span><span class="tAV">"{$target-attribute}"</span><span class="tAN"> select=</span><span class="tAV">"{.}"</span><span class="tEl">/&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="M_mappingM_generate-elementsS_build-mapping-stylesheet.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">mapping</span><span class="titleTemplateMode">generate-elements</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_mappingM_generate-elementsS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_mappingM_generate-elementsS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_mappingM_generate-elementsS_build-mapping-stylesheet.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 			
+                                 <p>This template is the core of the stylesheet. It is applied recursively to build
+                                    				the generated templates. Each application of this generates an element in the
+                                    output
+                                    				and then recurses to create the next.
+                                 </p>
+                                 
+                                 
+                                 			
+                                 <p>When first applied, the default parameters are used. The <b>top-level</b>
+                                    				and <b>element-list</b> parameters are initialised.
+                                 </p>
+                                 
+                                 			
+                                 <p> The first output element name is taken from the resulting sequence and generated.
+                                    				When first called the <b>top-level</b> attribute is set to a true value. This
+                                    				prompts the template to process the <b>hint</b>, <b>heading-level</b>
+                                    				and <b>target-attribute-value</b> attributes of the mapping. It additionally
+                                    				generates an <b>xsl:apply-templates</b> element to copy any id attributes
+                                    				over.
+                                 </p>
+                                 
+                                 			
+                                 <p>Regardless of whether <b>top-level</b> is true, it then generates an
+                                    					<b>xsl:apply-templates</b> to copy all attributes except id attributes.
+                                    				This leads to most attributes being copied to all generated elements.
+                                 </p>
+                                 
+                                 			
+                                 <p>The template then calls itself passing the unprocessed element names to the next
+                                    				recursion.
+                                 </p>
+                                 
+                                 		
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>mapping</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>generate-elements</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Parameters</div>
+                           <div class="flR"><input id="bt_prs_M_mappingM_generate-elementsS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('prs_M_mappingM_generate-elementsS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="prs_M_mappingM_generate-elementsS_build-mapping-stylesheet.xsl" style="display:block">
+                              <table class="attsT">
+                                 <thead>
+                                    <tr>
+                                       <th>QName</th>
+                                       <th>Namespace</th>
+                                       <th>Select</th>
+                                       <th>Type</th>
+                                    </tr>
+                                 </thead>
+                                 <tr>
+                                    <td class="fCol">element-list</td>
+                                    <td>No namespace</td>
+                                    <td>tokenize(@target-element, '\s+')</td>
+                                    <td>xsd:string*</td>
+                                 </tr>
+                                 <tr>
+                                    <td class="fCol">top-level</td>
+                                    <td>No namespace</td>
+                                    <td>true()</td>
+                                    <td>xsd:boolean</td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_mappingM_generate-elementsS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_mappingM_generate-elementsS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_mappingM_generate-elementsS_build-mapping-stylesheet.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"mapping"</span><span class="tAN"> mode=</span><span class="tAV">"generate-elements"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:param</span><span class="tAN"> name=</span><span class="tAV">"element-list"</span><span class="tAN"> as=</span><span class="tAV">"xsd:string*"</span><span class="tAN"> select=</span><span class="tAV">"tokenize(@target-element, '\s+')"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:param</span><span class="tAN"> name=</span><span class="tAV">"top-level"</span><span class="tAN"> as=</span><span class="tAV">"xsd:boolean"</span><span class="tAN"> select=</span><span class="tAV">"true()"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:choose</span><span class="tXSLEl">&gt;</span><span class="tI">
+    </span><span class="tC">&lt;!-- If there are no input elements in the sequence, create an apply-templates only - stop
+				the recursion --&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:when</span><span class="tAN"> test=</span><span class="tAV">"count($element-list) = 0"</span><span class="tXSLEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;axsl:apply-templates</span><span class="tAN"> select=</span><span class="tAV">"node()"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;/xsl:when&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:otherwise</span><span class="tXSLEl">&gt;</span><span class="tI">
+      </span><span class="tC">&lt;!-- Generate a literal element --&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;xsl:element</span><span class="tAN"> name=</span><span class="tAV">"{$element-list[1]}"</span><span class="tAN"> namespace=</span><span class="tAV">"{/map/@ns}"</span><span class="tXSLEl">&gt;</span><span class="tI">
+        </span><span class="tC">&lt;!-- If top level, process mapping attributes and generate an apply-templates
+						for the input ID attributes (if any) --&gt;</span><span class="tI">
+        </span><span class="tXSLEl">&lt;xsl:if</span><span class="tAN"> test=</span><span class="tAV">"$top-level = true()"</span><span class="tXSLEl">&gt;</span><span class="tI">
+          </span><span class="tXSLEl">&lt;xsl:apply-templates</span><span class="tAN"> select=</span><span class="tAV">"@hint|@heading-level"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;axsl:apply-templates</span><span class="tAN"> select=</span><span class="tAV">"@*[local-name() = 'id']"</span><span class="tEl">/&gt;</span><span class="tI">
+        </span><span class="tXSLEl">&lt;/xsl:if&gt;</span><span class="tI">
+        </span><span class="tXSLEl">&lt;xsl:apply-templates</span><span class="tAN"> select=</span><span class="tAV">"."</span><span class="tAN"> mode=</span><span class="tAV">"copy-attributes"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+        </span><span class="tC">&lt;!-- Recursing passing the tail of the sequence and setting top-level to false --&gt;</span><span class="tI">
+        </span><span class="tXSLEl">&lt;xsl:apply-templates</span><span class="tAN"> select=</span><span class="tAV">"."</span><span class="tAN"> mode=</span><span class="tAV">"generate-elements"</span><span class="tXSLEl">&gt;</span><span class="tI">
+          </span><span class="tXSLEl">&lt;xsl:with-param</span><span class="tAN"> name=</span><span class="tAV">"element-list"</span><span class="tAN"> select=</span><span class="tAV">"subsequence($element-list, 2)"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+          </span><span class="tXSLEl">&lt;xsl:with-param</span><span class="tAN"> name=</span><span class="tAV">"top-level"</span><span class="tAN"> select=</span><span class="tAV">"false()"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+        </span><span class="tXSLEl">&lt;/xsl:apply-templates&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;/xsl:element&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;/xsl:otherwise&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;/xsl:choose&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="M_mappingnottarget-elementM_generate-elementsS_build-mapping-stylesheet.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">mapping[not(@target-element)]</span><span class="titleTemplateMode">generate-elements</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>mapping[not(@target-element)]</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>generate-elements</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_mappingnottarget-elementM_generate-elementsS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_mappingnottarget-elementM_generate-elementsS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_mappingnottarget-elementM_generate-elementsS_build-mapping-stylesheet.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"mapping[not(@target-element)]"</span><span class="tAN"> mode=</span><span class="tAV">"generate-elements"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:apply-templates</span><span class="tAN"> select=</span><span class="tAV">"."</span><span class="tAN"> mode=</span><span class="tAV">"copy-attributes"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;axsl:apply-templates</span><span class="tAN"> select=</span><span class="tAV">"node()"</span><span class="tEl">/&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="M_hintS_build-mapping-stylesheet.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">@hint</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_hintS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_hintS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_hintS_build-mapping-stylesheet.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>This template copies the <b>hint</b> attribute to a <b>cword:hint</b> attribute on
+                                 			the output.
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>@hint</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>#default</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_hintS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_hintS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_hintS_build-mapping-stylesheet.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"@hint"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:attribute</span><span class="tAN"> name=</span><span class="tAV">"hint"</span><span class="tAN"> namespace=</span><span class="tAV">"http://www.corbas.co.uk/ns/transforms/map"</span><span class="tAN"> select=</span><span class="tAV">"."</span><span class="tXSLEl">/&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="M_heading-levelS_build-mapping-stylesheet.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateMatch">@heading-level</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_M_heading-levelS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_M_heading-levelS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_M_heading-levelS_build-mapping-stylesheet.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 			This template copies the <b>heading-level</b> attribute to a
+                                 					<b>cword:level</b> attribute on the output.
+                                 		
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Match</td>
+                        <td>@heading-level</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Mode</td>
+                        <td>#default</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_M_heading-levelS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_M_heading-levelS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_M_heading-levelS_build-mapping-stylesheet.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> match=</span><span class="tAV">"@heading-level"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:attribute</span><span class="tAN"> name=</span><span class="tAV">"level"</span><span class="tAN"> namespace=</span><span class="tAV">"http://www.corbas.co.uk/ns/transforms/map"</span><span class="tAN"> select=</span><span class="tAV">"."</span><span class="tXSLEl">/&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="V_default-source-elementS_build-mapping-stylesheet.xsl"></a><div class="cmpT">Variable
+         <span class="qname">default-source-element</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_V_default-source-elementS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_V_default-source-elementS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_V_default-source-elementS_build-mapping-stylesheet.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 			
+                                 <p>The <b>default-source-element</b> variable defines the element to be searched for in
+                                    				the incoming XML file. This is defined by the <b>source-element</b> attribute
+                                    				of the <b>map</b> element. This can be overridden by the attribute with the
+                                    			same name on a <b>mapping</b> element if required.
+                                 </p>
+                                 		
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Select</td>
+                        <td>/map/@source-element</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Used by</div>
+                           <div class="flR"><input id="bt_uB_V_default-source-elementS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_V_default-source-elementS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="uB_V_default-source-elementS_build-mapping-stylesheet.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Templates</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="build-mapping-stylesheet.html#M_source-valueS_build-mapping-stylesheet.xsl" target="_self" title="No namespace"><span class="mRf">@source-value</span></a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="build-mapping-stylesheet.html#M_source-value-prefixS_build-mapping-stylesheet.xsl" target="_self" title="No namespace"><span class="mRf">@source-value-prefix</span></a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="build-mapping-stylesheet.html#M_source-value-suffixS_build-mapping-stylesheet.xsl" target="_self" title="No namespace"><span class="mRf">@source-value-suffix</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_V_default-source-elementS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_V_default-source-elementS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_V_default-source-elementS_build-mapping-stylesheet.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"default-source-element"</span><span class="tAN"> select=</span><span class="tAV">"/map/@source-element"</span><span class="tXSLEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="V_default-source-attributeS_build-mapping-stylesheet.xsl"></a><div class="cmpT">Variable
+         <span class="qname">default-source-attribute</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_V_default-source-attributeS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_V_default-source-attributeS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_V_default-source-attributeS_build-mapping-stylesheet.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 			
+                                 <p>The <b>default-source-attribute</b> variable defines the name of attribute on input
+                                    				elements that contains the search values. This is defined by the
+                                    					<b>source-attribute</b> attribute of the <b>map</b> element.
+                                 </p>
+                                 		
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Select</td>
+                        <td>/map/@source-attribute</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Used by</div>
+                           <div class="flR"><input id="bt_uB_V_default-source-attributeS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_V_default-source-attributeS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="uB_V_default-source-attributeS_build-mapping-stylesheet.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Templates</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="build-mapping-stylesheet.html#M_source-valueS_build-mapping-stylesheet.xsl" target="_self" title="No namespace"><span class="mRf">@source-value</span></a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="build-mapping-stylesheet.html#M_source-value-prefixS_build-mapping-stylesheet.xsl" target="_self" title="No namespace"><span class="mRf">@source-value-prefix</span></a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="build-mapping-stylesheet.html#M_source-value-suffixS_build-mapping-stylesheet.xsl" target="_self" title="No namespace"><span class="mRf">@source-value-suffix</span></a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="build-mapping-stylesheet.html#M_mappingtarget-attribute-valuetarget-attributeglobal-target-attribute1source-attributedefault-source-attribute1M_copy-attributesS_build-mapping-stylesheet.xsl" target="_self" title="No namespace"><span class="mRf">mapping[@target-attribute-value]   [(@target-attribute, $global-target-attribute)[1]
+                                                   = (@source-attribute, $default-source-attribute)[1]]</span><span class="mdRf">copy-attributes</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_V_default-source-attributeS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_V_default-source-attributeS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_V_default-source-attributeS_build-mapping-stylesheet.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"default-source-attribute"</span><span class="tAN"> select=</span><span class="tAV">"/map/@source-attribute"</span><span class="tXSLEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="V_global-target-attributeS_build-mapping-stylesheet.xsl"></a><div class="cmpT">Variable
+         <span class="qname">global-target-attribute</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_V_global-target-attributeS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_V_global-target-attributeS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_V_global-target-attributeS_build-mapping-stylesheet.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 			
+                                 <p>The <b>target-attribute</b> variable defines the name of an attribute on
+                                    				output elements to be generated (when the mapping contains a
+                                    					<b>target-attribute-value</b> attribute. This is defined by the
+                                    					<b>target-attribute</b> attribute of the <b>map</b> element but can
+                                    				be overriding by individual <b>mapping</b> elements.
+                                 </p>
+                                 		
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Select</td>
+                        <td>/map/@target-attribute</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Used by</div>
+                           <div class="flR"><input id="bt_uB_V_global-target-attributeS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_V_global-target-attributeS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="uB_V_global-target-attributeS_build-mapping-stylesheet.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Templates</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="build-mapping-stylesheet.html#M_target-attribute-valueS_build-mapping-stylesheet.xsl" target="_self" title="No namespace"><span class="mRf">@target-attribute-value</span></a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="build-mapping-stylesheet.html#M_mappingtarget-attribute-valuenottarget-attributeorglobal-target-attributeS_build-mapping-stylesheet.xsl" target="_self" title="No namespace"><span class="mRf">mapping[@target-attribute-value][not(@target-attribute or $global-target-attribute)]</span></a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="build-mapping-stylesheet.html#M_mappingtarget-attribute-valuetarget-attributeglobal-target-attribute1source-attributedefault-source-attribute1M_copy-attributesS_build-mapping-stylesheet.xsl" target="_self" title="No namespace"><span class="mRf">mapping[@target-attribute-value]   [(@target-attribute, $global-target-attribute)[1]
+                                                   = (@source-attribute, $default-source-attribute)[1]]</span><span class="mdRf">copy-attributes</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_V_global-target-attributeS_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_V_global-target-attributeS_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_V_global-target-attributeS_build-mapping-stylesheet.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"global-target-attribute"</span><span class="tAN"> select=</span><span class="tAV">"/map/@target-attribute"</span><span class="tXSLEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div><a id="O_S_build-mapping-stylesheet.xsl"></a><div class="cmpT">Output
+         <span class="qname">(default)</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Documentation</div>
+                           <div class="flR"><input id="bt_dS_O_S_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('dS_O_S_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="dS_O_S_build-mapping-stylesheet.xsl" style="display:block">
+                              <div>
+                                 <h3>Description</h3>
+                                 			
+                                 <p>This program and accompanying files are copyright 2008, 2009, 20011, 2012, 2013
+                                    				Corbas Consulting Ltd.
+                                 </p>
+                                 
+                                 			
+                                 <p>This program is free software: you can redistribute it and/or modify it under the
+                                    				terms of the GNU General Public License as published by the Free Software
+                                    				Foundation, either version 3 of the License, or (at your option) any later
+                                    				version.
+                                 </p>
+                                 
+                                 			
+                                 <p>This program is distributed in the hope that it will be useful, but WITHOUT ANY
+                                    				WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+                                    A
+                                    				PARTICULAR PURPOSE. See the GNU General Public License for more details.
+                                 </p>
+                                 
+                                 			
+                                 <p>You should have received a copy of the GNU General Public License along with this
+                                    				program. If not, see http://www.gnu.org/licenses/.
+                                 </p>
+                                 
+                                 			
+                                 <p>If your organisation or company are a customer or client of Corbas Consulting Ltd
+                                    				you may be able to use and/or distribute this software under a different license.
+                                    If
+                                    				you are not aware of any such agreement and wish to agree other license terms
+                                    you
+                                    				must contact Corbas Consulting Ltd by email at corbas@corbas.co.uk.
+                                 </p>
+                                 
+                                 		
+                              </div>
+                              <hr />
+                              <div>
+                                 <h3>Description</h3>
+                                 			
+                                 <p>This stylesheet is used to read a mapping file (as defined by
+                                    					<b>mapping.rng</b> and convert it to an XSLT stylesheet that can be used
+                                    				to read an incoming XML file, read given elements and write out new ones. 
+                                 </p>
+                                 			
+                                 <p>The script is part of the Word to XML mapping toolkit and run as part of that
+                                    				pipeline. It is intended to run after the Word document has been converted to
+                                    				elements in the output XML language but not structured. In general, word paragraphs
+                                    				are mapped to output language paragraphs unless they are tables, images or lists.
+                                    				These paragraphs are then refined as appropriate by the output of this stylesheet.
+                                    				See the documentation for <b>mapping.rng</b> for details on the definitions
+                                    				used.
+                                 </p>
+                                 
+                                 
+                                 			
+                                 <p>The main output of this stylesheet is driven by three pairs of templates. Each
+                                    				produces a new template. Three of these generate templates to suppress their input,
+                                    				three generate templates to transform their input to the mapping defined output.
+                                    				There is a pair for each of the options provided by the mapping schema (full match,
+                                    				prefix match and suffix match).
+                                 </p>
+                                 
+                                 		
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Output properties</div>
+                           <div class="flR"><input id="bt_o_" type="image" src="img/btM.gif" value="-" onclick="switchState('o_');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="o_" style="display:block">
+                              <table class="attsT">
+                                 <thead>
+                                    <tr>
+                                       <th>method</th>
+                                       <th>encoding</th>
+                                       <th>indent</th>
+                                    </tr>
+                                 </thead>
+                                 <tr>
+                                    <td>xml</td>
+                                    <td>UTF-8</td>
+                                    <td>yes</td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_O_S_build-mapping-stylesheet.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_O_S_build-mapping-stylesheet.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_O_S_build-mapping-stylesheet.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:output</span><span class="tAN"> method=</span><span class="tAV">"xml"</span><span class="tAN"> indent=</span><span class="tAV">"yes"</span><span class="tAN"> encoding=</span><span class="tAV">"UTF-8"</span><span class="tXSLEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table>
+      <div class="toTop"><a href="#INDEX"> [ top ] </a></div>
+      <div class="footer">
+         <hr />
+         <div align="center">Stylesheet documentation generated by <a href="http://www.oxygenxml.com" target="_parent"><span class="oXygenLogo"><span class="redX">&lt;</span>o<span class="redX">X</span>ygen<span class="redX">/&gt;</span></span></a><sup>®</sup> XML Editor.
+         </div>
+      </div><script type="text/javascript">
+         <!--
+                    // The namespace is the selected option in the TOC combo.
+                    
+                    // The corresponding div is already visible conf. to its style attr.                     
+                    
+                    
+                    // Floats the toolbar.
+                    var globalControls = getElementObject("global_controls"); 
+                    
+                    if(globalControls != null){
+                    var browser=navigator.appName;
+                    var version = parseFloat(navigator.appVersion.split('MSIE')[1]);
+                    
+                    var IE6 = false;
+                    if ((browser=="Microsoft Internet Explorer") && (version < 7)){
+                    IE6 = true;
+                    }
+                    
+                    //alert (IE6 + " |V| " + version);
+                    
+                    if(IE6){
+                    // On IE 6 the 'fixed' property is not supported. We must use javascript. 
+                    globalControls.style.position='absolute';                         
+                    // The global controls will do not exist in the TOC frame, when chunking.
+                    findAndFloat("global_controls", 225, 30);    
+                    } else {
+                    globalControls.style.position='fixed';                     	
+                    }
+                    
+                    globalControls.style.right='0';                       
+                    }
+                //--></script></body>
+</html>

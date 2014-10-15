@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar ns="http://www.corbas.co.uk/ns/transforms/map" xmlns="http://relaxng.org/ns/structure/1.0"
+	xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+	datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+
+	<a:documentation  xmlns="http://www.w3.org/1999/xhtml">	This program and accompanying files are copyright 2008, 2009, 20011, 2012, 2013 Corbas Consulting Ltd.<p></p>
+		
+		<p>This program is free software: you can redistribute it and/or modify
+		it under the terms of the GNU General Public License as published by
+		the Free Software Foundation, either version 3 of the License, or
+		(at your option) any later version.</p>
+		
+		This program is distributed in the hope that it will be useful,
+		but WITHOUT ANY WARRANTY; without even the implied warranty of
+		MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+		GNU General Public License for more details.
+		
+		You should have received a copy of the GNU General Public License
+		along with this program.  If not, see http://www.gnu.org/licenses/.
+		
+		If your organisation or company are a customer or client of Corbas Consulting Ltd you may
+		be able to use and/or distribute this software under a different license. If you are
+		not aware of any such agreement and wish to agree other license terms you must
+		contact Corbas Consulting Ltd by email at corbas@corbas.co.uk. </a:documentation>
+
+	<documentation xmlns="http://relaxng.org/ns/compatibility/annotations/1.0">
+		<p xmlns="http://www.w3.org/1999/xhtml">This schema defines a mechanism for creating a
+			mapping file that describes a series of transformations to specialise an input document.
+			Given an element name and an attribute name, the transformations created will convert an
+			input element into one or more output elements (assumed to be part of the same tag set).
+			This is used when converting from Word to another XML model. The pipeline starts by
+			converting Word paras to paragraphs in the output language. This mechanism is then used
+			to convert the paragraphs to more appropriate elements based on the original word style
+			(which must be retained in an attribute).</p>
+		<p xmlns="http://www.w3.org/1999/xhtml">The map element contains a list of mappings. The map
+			defines the name of the element to be examined and the name of the attribute that will
+			contain the mapping values. It also identifies the namespace of the input language. The
+			output is assumed to be in the same namespace as the input. </p>
+
+	</documentation>
+
+	<start>
+		<ref name="map"/>
+	</start>
+
+	<define name="map">
+		<documentation xmlns="http://relaxng.org/ns/compatibility/annotations/1.0">
+			<p xmlns="http://www.w3.org/1999/xhtml">The <code class="element">map</code> element
+				wraps the mapping elements and provides the context within which they function.</p>
+			<p xmlns="http://www.w3.org/1999/xhtml">The <code class="element">map</code> element has
+				three mandatory attributes used to define the XSLT stylesheet generated from a
+				mapping file.</p>
+			<dl xmlns="http:/www.w3.org/1999/xhtml">
+				<dt>ns</dt>
+				<dd>This attribute defines the URI of the input XML's namespace. This is used as the
+					default namespace for the generated stylesheet.</dd>
+				<dt>source-element</dt>
+				<dd>This is the name of the element which will be matched and potentially
+					transformed.</dd>
+				<dt>source-attribute</dt>
+				<dd>This is the name of the attribute which will be matched against using the values
+					defined in the mappings.</dd>
+			</dl>
+			<p>Additionally, there is an optional attribute as well — <code class="attribute"
+					>target-attribute</code>. This attribute will be generated on the output
+				elements if present and if the individual mappings define a value for it (via the
+					<code class="attribute">target-attribute-value</code> attribute).</p>
+		</documentation>
+		<element name="map">
+
+			<attribute name="ns">
+				<data type="anyURI">
+					<param name="minLength">1</param>
+				</data>
+			</attribute>
+
+            <ref name="source-element"/>
+
+		    <ref name="source-attribute"/>
+
+
+			<optional>
+				<ref name="target-attribute"/>
+			</optional>
+
+			<oneOrMore>
+				<ref name="mapping"/>
+			</oneOrMore>
+		</element>
+	</define>
+
+	<define name="mapping">
+		<documentation xmlns="http://relaxng.org/ns/compatibility/annotations/1.0">
+			<p xmlns="http://www.w3.org/1999/xhtml">The mapping element defines the attribute values
+				to search for (the attribute name is defined in the map element) and the outputs to
+				generate. Any attributes on the original input are copied to the output bar any id
+				attributes which are only copied to the outermost element generated (the converter
+				checks for any attribute named <code class="attribute">id</code> or <code
+					class="attribute">xml:id</code></p>
+			<p xmlns="http://www.w3.org/1999/xhtml">Attribute values can be defined by a whole value
+				match using the <code class="attribute">source-value</code> attribute, by initial
+				substring (using the <code class="attribute">source-value-prefix</code> attribute)
+				or by final substring (using the <code class="attribute">source-value-suffix</code>
+				attribute). Exactly one of these attributes must be provided.</p>
+			<p>The output element (or elements) can be defined using the <code class="attribute"
+					>target-element</code> attribute. This attribute consists of one or more element
+				names, space separated. These are generated in the output XML from left to right
+				(elements to the right are created as children of the element preceding them). They
+				are defined to be in the same namespace as the input elements.</p>
+			<p xmlns="http://www.w3.org/1999/xhtml">Four additional attributes may set:</p>
+			<dl xmlns="http://www.w3.org/1999/xhtml">
+				<dt>suppress</dt>
+				<dd>If this attribute is set the input is not copied to the output. Other attributes
+					are ignored.</dd>
+				<td>hint</td>
+				<dd>If this attribute is set, the value is copied to the outermost generated element
+					as the value of a cword:hint attribute. This is simply a way to provide
+					additional semantic context for later stages of a transformation if
+					required.</dd>
+				<dt>heading-level</dt>
+				<dd>This attribute generates a cword:level attribute on the outermost generated
+					element. This can be used to define heading levels in the output content. If the
+					output language supports nested section type elements, the heading levels can be
+					used as input to a transformation that adds the desired structure to the
+					XML.</dd>
+				<dt>target-attribute</dt>
+				<dd>This attribute is used to set a new attribute on output. If present on the
+				<code class="element">mapping</code> element, it overrides any element set on the
+				<code class="element">map</code> element.</dd>
+				<dt>target-attribute-value</dt>
+				<dd>This attribute is used in conjunction with the optional <code class="attribute"
+						>target-attribute</code> attribute on the <code class="element">map</code> or the current 
+					element to insert a new attribute with the given value on to the outermost
+					generated element.</dd>
+			</dl>
+		</documentation>
+
+		<element name="mapping">
+
+			<ref name="source-value-options"/>
+
+			<choice>
+
+				<optional>
+					<ref name="suppress"/>
+				</optional>
+
+
+				<interleave>
+					<choice>
+						<interleave>
+							<ref name="target-element"/>
+
+							<optional>
+								<ref name="target-attribute-value"/>
+							</optional>
+
+						</interleave>
+
+
+						<ref name="target-attribute-value"/>
+					</choice>
+
+					<optional>
+						<ref name="heading-level"/>
+					</optional>
+
+					<optional>
+						<ref name="hint"/>
+					</optional>
+				    
+				    <optional>
+				        <ref name="source-element"/>
+				    </optional>
+
+				    <optional>
+				        <ref name="source-attribute"/>
+				    </optional>
+				    
+				    <optional>
+				        <ref name="target-attribute"/>
+				    </optional>
+				    
+
+				</interleave>
+			</choice>
+
+		</element>
+	</define>
+
+
+	<define name="source-value">
+		<attribute name="source-value">
+
+			<data type="string">
+				<param name="minLength">1</param>
+			</data>
+		</attribute>
+	</define>
+
+	<define name="source-value-prefix">
+		<attribute name="source-value-prefix">
+			<data type="string">
+				<param name="minLength">1</param>
+			</data>
+		</attribute>
+	</define>
+
+	<define name="source-value-suffix">
+		<attribute name="source-value-suffix">
+			<data type="string">
+				<param name="minLength">1</param>
+			</data>
+
+		</attribute>
+	</define>
+
+	<define name="source-value-options">
+		<choice>
+			<ref name="source-value"/>
+			<ref name="source-value-suffix"/>
+			<ref name="source-value-prefix"/>
+		</choice>
+	</define>
+
+	<define name="suppress">
+		<!-- The stylesheet processing mappings assumes this defaults to false -->
+		<attribute name="suppress">
+			<data type="boolean"/>
+		</attribute>
+	</define>
+
+	<define name="target-element">
+		<attribute name="target-element">
+			<data type="NMTOKENS">
+				<param name="minLength">1</param>
+			</data>
+		</attribute>
+	</define>
+
+	<define name="heading-level">
+		<attribute name="heading-level">
+			<data type="int">
+				<param name="minInclusive">0</param>
+			</data>
+		</attribute>
+	</define>
+
+	<define name="hint">
+		<attribute name="hint">
+			<data type="string">
+				<param name="minLength">1</param>
+			</data>
+		</attribute>
+
+	</define>
+
+	<define name="target-attribute-value">
+		<attribute name="target-attribute-value">
+			<data type="string">
+				<param name="minLength">1</param>
+			</data>
+		</attribute>
+	</define>
+
+	<define name="target-attribute">
+		<attribute name="target-attribute">
+			<data type="Name">
+				<param name="minLength">1</param>
+			</data>
+		</attribute>
+	</define>
+
+    <define name="source-element">
+        <attribute name="source-element">
+            <data type="string">
+                <!-- regular expression matches an NCName or a literal asterisk -->
+                <param name="pattern">([\i-[:]][\c-[:]]*)|\*</param>
+                <param name="minLength">1</param>
+            </data>
+        </attribute>
+    </define>
+    
+    <define name="source-attribute">
+        <attribute name="source-attribute">
+            <data type="Name">
+                <param name="minLength">1</param>
+            </data>
+        </attribute>
+    </define>
+    
+</grammar>
