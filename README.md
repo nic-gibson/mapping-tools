@@ -15,7 +15,7 @@ The mapping tools are driven by an XML file which describes the conversions. The
 
 **NOTE**: the mapping namespace is omitted from the examples below for brevity.
 
-The mapping file is deliberately simple. The primary simplification is to do with namespaces. A map document assumes that the input and output elements are in the same namespace. Only one namespace can be referenced per mapping document. Multiple mapping documents 
+The mapping file is deliberately simple. The primary simplification is to do with namespaces. A map document assumes that the input and output elements are in the same namespace. Only one namespace can be referenced per mapping document. Multiple mapping documents should be used if multiple namespaces are to be transformed.
 
 ### `map` element ###
 
@@ -79,18 +79,19 @@ For example, if the input element was as follows:
 
 and the mapping was as follows:
 
-```
+```xml
 <mapping source-element="p" source-attribute="class" 
   source-value="Heading1" target-element="h1"/>
 ```
 
 the output of the generated transformation would be
 
-```
+```xml
 <h1 class="Heading1" xml:id="n1">This is a test</h1>
 ```
 
 However, if the mapping was
+
 ```xml
 <mapping source-element="p" source-attribute="class" 
   source-value="Heading1" 
@@ -99,7 +100,7 @@ However, if the mapping was
 
 the output would be:
 
-```
+```xml
 <div xml:id="n1" class="Heading1">
   <h1 class="Heading1">This is a test</h1>
 </div>
@@ -120,7 +121,7 @@ For reference, the generated template would be:
 </xsl:template>
 ```
 
-The `target-attribute` and `target-attribute-value` attributes simply generate a new attribute/value pair on the top level output element. If the `target-attribute` matches the `source-attribute` the source attribute's value will not be copied to the output but will be replaced with the value stored in `target-attribute-value`.
+The `target-attribute` and `target-attribute-value` attributes simply generate a new attribute/value pair on the top level output element. If the `target-attribute` value matches that of the `source-attribute` the source attribute's value will not be copied to the output but will be replaced with the value stored in `target-attribute-value`.
 
 ```xml
 <mapping source-element="p" source-attribute="class" 

@@ -189,9 +189,9 @@
 
 		<axsl:template>
 			<xsl:apply-templates select="@source-value|@source-value-prefix|@source-value-suffix"/>
-			<axsl:copy>
-				<xsl:apply-templates select="." mode="generate-elements"/>
-			</axsl:copy>
+			<xsl:apply-templates select="." mode="generate-elements">
+				<xsl:with-param name="element-list" select="(../@source-element, $default-source-element)[1]"/>
+			</xsl:apply-templates>
 		</axsl:template>
 
 	</xsl:template>
@@ -341,12 +341,6 @@
 
 	</xsl:template>
 	
-	<xsl:template match="mapping[not(@target-element)]" mode="generate-elements">
-		<xsl:apply-templates select="." mode="copy-attributes"/>
-		<axsl:apply-templates select="node()"/>		
-	</xsl:template>
-	
-
 
 	<xd:doc>
 		<xd:desc>This template copies the <xd:b
